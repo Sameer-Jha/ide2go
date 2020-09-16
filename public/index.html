@@ -2,6 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/mode/javascript/javascript.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/theme/cobalt.min.css"
+    />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -40,4 +50,14 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    const codemirrorEditor = CodeMirror.fromTextArea(
+      document.getElementById("codearea"),
+      {
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "cobalt",
+      }
+    );
+  </script>
 </html>
